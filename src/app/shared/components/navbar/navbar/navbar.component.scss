@@ -1,0 +1,18 @@
+nav {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4b5563;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+nav a.active {
+  color: #2563eb;
+}

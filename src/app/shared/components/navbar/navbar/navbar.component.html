@@ -1,0 +1,27 @@
+<nav class="w-full bg-white shadow-sm px-6 py-3 flex items-center justify-between">
+  <!-- Logo / Brand -->
+  <div class="text-xl font-semibold text-gray-800">
+   User Management 
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="hidden md:flex space-x-8 text-gray-600 font-medium">
+    <li><a routerLink="/dashboard" routerLinkActive="text-blue-600" class="hover:text-blue-600">Dashboard</a></li>
+    <li><a routerLink="/about" routerLinkActive="text-blue-600" class="hover:text-blue-600">About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="text-blue-600" class="hover:text-blue-600">Contact</a></li>
+  </ul>
+
+  <!-- Right Section (Profile / Login) -->
+  <div class="flex items-center space-x-4">
+ 
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden p-2 text-gray-600 hover:text-gray-800 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
