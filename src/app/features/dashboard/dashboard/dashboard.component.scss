@@ -25,6 +25,9 @@ button {
     font-weight: 600;
   }
 
+.gx-10 {
+  column-gap: 10px;
+}
   .filter-bar {
     display: flex;
     gap: 1rem;
@@ -94,4 +97,114 @@ button {
       cursor: pointer;
     }
   }
+  .dashboard-container {
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.dashboard-container h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #1e293b; /* dark slate */
+}
+
+.dashboard-container input[type="text"],
+.dashboard-container select {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.user-table thead {
+  background-color: #1e293b;
+  color: white;
+}
+
+.user-table thead th {
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.user-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #334155;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.pagination button {
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 8px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .user-table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  .user-table thead tr {
+    display: none;
+  }
+
+  .user-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .user-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #1e293b;
+  }
+}
+
 }

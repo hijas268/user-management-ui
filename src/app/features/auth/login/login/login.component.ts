@@ -30,13 +30,11 @@ export class LoginComponent {
 
   onSubmit(): void {
     if (this.loginForm.invalid) return;
-    debugger;
     this.loading = true;
     this.errorMessage = '';
 
     this.authService.login(this.loginForm.value).subscribe({
       next: (res:any) => {
-        debugger;
         localStorage.setItem('token', res.token);
         this.router.navigate(['/dashboard']); // redirect after login
       },

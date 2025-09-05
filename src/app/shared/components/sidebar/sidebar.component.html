@@ -1,0 +1,20 @@
+<!-- sidebar.component.html -->
+<div class="sidebar">
+  <div class="logo">
+    <h2>User Management</h2>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/dashboard" routerLinkActive="active">
+        <span class="icon">📊</span>
+        <span class="title">Dashboard</span>
+      </a>
+    </li>
+    <li *ngIf="getuserprofile.isAdmin()">
+      <a routerLink="/audit-trail" routerLinkActive="active">
+        <span class="icon">📝</span>
+        <span class="title">Audit Trail</span>
+      </a>
+    </li>
+  </ul>
+</div>

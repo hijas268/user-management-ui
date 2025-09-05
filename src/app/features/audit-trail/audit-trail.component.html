@@ -1,0 +1,37 @@
+<div class="audit-container">
+  <h2>Audit Trail</h2>
+
+  <!-- Search -->
+  <input type="text" [(ngModel)]="search" placeholder="Search logs..." (input)="onSearchChange()" />
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Performed By</th>
+        <th>Entity</th>
+        <th>Entity Id</th>
+        <th>IP Address</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr *ngFor="let log of logs">
+    <td data-label="Action">{{ log.action }}</td>
+    <td data-label="Performed By">{{ log.performedBy }}</td>
+    <td data-label="Entity">{{ log.entityName }}</td>
+    <td data-label="Entity Id">{{ log.entityId }}</td>
+    <td data-label="IP Address">{{ log.ipAddress }}</td>
+    <td data-label="Date">{{ log.performedAt | date:'short' }}</td>
+  </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="page === 1">Prev</button>
+    <span>Page {{ page }}</span>
+    <button (click)="nextPage()" [disabled]="page * pageSize >= total">Next</button>
+  </div>
+</div>
