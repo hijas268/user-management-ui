@@ -6,13 +6,13 @@
     <h3>Add User</h3>
     <div class="row gx-10">
       <div class="col-md-2 col-gap">
-        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="newUser.Username" />
+        <input type="text" class="form-control " placeholder="Username" [(ngModel)]="newUser.Username"  required/>
       </div>
       <div class="col-md-2">
-        <input type="email" class="form-control" placeholder="Email" [(ngModel)]="newUser.Email" />
+        <input type="email" class="form-control" placeholder="Email" [(ngModel)]="newUser.Email" required/>
       </div>
         <div class="col-md-2">
-        <input type="password" class="form-control" placeholder="Password" [(ngModel)]="newUser.Password" />
+        <input type="password" class="form-control" placeholder="Password" [(ngModel)]="newUser.Password" required/>
       </div>
       <div class="col-md-2">
         <select class="form-select" [(ngModel)]="roleid" aria-placeholder="Please Select UserType">

@@ -19,6 +19,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/audit-trail/audit-trail.component').then(m => m.AuditTrailComponent)
   },
+      {
+    path: 'profile',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/myprofile/myprofile.component').then(m => m.myprofileComponent)
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login' }
 ];

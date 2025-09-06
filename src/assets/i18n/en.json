@@ -3,5 +3,11 @@
   "USERNAME": "Username",
   "PASSWORD": "Password",
   "DASHBOARD": "Dashboard",
-  "USERS": "Users"
+  "USERS": "Users",
+  "APP_TITLE": "User Management",
+  "AUDIT_TRAIL": "Audit Trail",
+  "LOGOUT": "Logout",
+  "About":"About",
+  "Contact":"Contact",
+  "Account":"Account"
 }
